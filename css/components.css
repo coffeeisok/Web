@@ -56,11 +56,13 @@
   color: #fff;
 }
 
-/* “了解我们”独立钩子：后续可单独改色，不影响其它按钮 */
+/* “了解我们”独立钩子：让首页 CTA 更突出 */
 .btn--about {
-  /* Dedicated style hook for the "了解我们" CTA; keep unchanged for now. */
-  background: linear-gradient(135deg, var(--primary), var(--primary-deep));
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
   color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* 按钮悬停微动效 */
