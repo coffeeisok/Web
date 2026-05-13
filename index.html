@@ -18,8 +18,13 @@
     <link rel="stylesheet" href="./css/contact.css" /><!-- 新增：联系我们表单样式 -->
     
     <!-- ==================== jQuery 引入（考核要求） ==================== -->
-    <!-- 使用 jQuery 3.7.1 CDN，确保表单验证和交互功能可用 -->
+    <!-- 使用 jQuery 3.7.1 CDN，失败时降级到本地备份 -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      if (!window.jQuery) {
+        document.write('<script src="./js/jquery-3.7.1.min.js"><\/script>');
+      }
+    </script>
     
     <!-- ==================== JavaScript 模块引入 ==================== -->
     <script defer src="./js/scroll.js"></script>

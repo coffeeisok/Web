@@ -64,6 +64,14 @@ document.addEventListener("DOMContentLoaded", function() {
       loader.classList.add("page-loader--hidden");
       console.log('✓ 页面加载动画已关闭');
     }, 220);
+
+    // 兜底：防止因脚本错误或网络失败导致 loader 永远不消失
+    window.setTimeout(function() {
+      if (!loader.classList.contains("page-loader--hidden")) {
+        loader.classList.add("page-loader--hidden");
+        console.warn('⚠️ 页面加载遮罩超时隐藏');
+      }
+    }, 5000);
   }
   
   // ==================== 初始化完成日志 ====================
